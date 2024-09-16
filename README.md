@@ -53,7 +53,7 @@
 
 #### Connecting:
 - First, create a server (check instructions above).
-- Run `irssi`.
+- Open a new terminal run `irssi`.
 - type `/connect localhost 2222 2222` and enter.
 
 ## Command List
