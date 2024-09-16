@@ -3,7 +3,7 @@
     <img src="github_gifs/client-server.gif" alt="client server gif gif" width="150" height="150">
   </a>
   <h3 align="center">IRC: Internet Relay Chat</h3>
-  Create Servers, chat with indidviduals or groups, connect to a gui client.
+  Create Servers, chat with indidviduals or groups, connect to a gui client `(irssi)`.
   <br>
   <br>
 </div>
