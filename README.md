@@ -46,4 +46,12 @@
 - Create other clients and chat with them (see full list of commands below)
 
 
-## Connect to a GUI
+## Connect to a GUI (irssi)
+
+#### If you don't have irssi:
+- Run `home brew install irssi`
+
+#### Connecting:
+- First, create a server (check instructions above)
+- Run `irssi`
+- will add instructions soon
