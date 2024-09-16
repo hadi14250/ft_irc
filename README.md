@@ -42,7 +42,7 @@
 - After joining server, type `PASS 1234` and `enter`.
 - After joining server, type `PASS 1234` and `enter`.
 - Type `NICK <<your_name>>` and `enter`
-- Type `USER <<USER_NAME>>` `<<REAL_NAME>>` and `enter`
+- Type `USER <<USER_NAME>> <<REAL_NAME>>` and `enter`
 - Create other clients and chat with them (see full list of commands below)
 
 
