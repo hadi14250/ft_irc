@@ -41,9 +41,9 @@
 - The areguments are: `nc <<port_number>>`
 - After joining server, type `PASS 1234` and `enter`.
 - After joining server, type `PASS 1234` and `enter`.
-- Type `NICK <<your_name>>` and `enter`
-- Type `USER <<USER_NAME>> <<REAL_NAME>>` and `enter`
-- Create other clients and chat with them (see full list of commands below)
+- Type `NICK <<your_name>>` and `enter`.
+- Type `USER <<USER_NAME>> <<REAL_NAME>>` and `enter`.
+- Create other clients and chat with them (see full list of commands below).
 
 
 ## Connect to a GUI (irssi)
@@ -52,9 +52,9 @@
 - Run `home brew install irssi`
 
 #### Connecting:
-- First, create a server (check instructions above)
-- Run `irssi`
-- will add instructions soon
+- First, create a server (check instructions above).
+- Run `irssi`.
+- type `/connect localhost 2222 2222` and enter.
 
 ## Command List
 
