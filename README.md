@@ -77,3 +77,51 @@
 | Topic | The `TOPIC` command is used to change or view the topic of the given channel. |
 | User | The `USER` command is used at the beginning of a connection to specify the username and realname of a new user. |
 
+
+
+<br>
+<br>
+
+## Client Server Connection Graph
+
+
+<div align="center">
+<a href="https://github.com/hadi14250">
+    <img src="github_gifs/network.png" alt="server client graph" >
+  </a>
+
+
+</div>
+
+<br>
+
+
+## Contributers
+
+<table>
+
+<tr>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/hadi14250>
+            <img src="https://avatars.githubusercontent.com/u/93770645?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Yixin Shen/>
+            <br />
+            <sub style="font-size:14px"><b>Hadi Kaddoura</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/hbuivu>
+            <img src="https://avatars.githubusercontent.com/u/26291116?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Bailey Harrington/>
+            <br />
+            <sub style="font-size:14px"><b>hbuivu</b></sub>
+        </a>
+    </td>
+		<td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/virtualjensen>
+            <img src="https://avatars.githubusercontent.com/u/94916561?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Casper/>
+            <br />
+            <sub style="font-size:14px"><b>Jensen</b></sub>
+        </a>
+    </td>
+</tr>
+</table>
+
