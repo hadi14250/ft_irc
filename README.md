@@ -34,15 +34,15 @@
 - Run `./ircserv 1234 1234`
 - The areguments are: `./ircserv <<port_number>> <<server_password>>`
 
-#### To Join the server as client
+#### To Join the server as client:
 
 - Open a new terminal (shell)
 - Run `nc localhost 1234`
 - The areguments are: `nc <<port_number>>`
 - After joining server, type `PASS 1234` and `enter`.
 - After joining server, type `PASS 1234` and `enter`.
-- type `NICK <<your_name>>` and `enter`
-- type `USER <<USER_NAME>>` `<<REAL_NAME>>` and `enter`
+- Type `NICK <<your_name>>` and `enter`
+- Type `USER <<USER_NAME>>` `<<REAL_NAME>>` and `enter`
 - Create other clients and chat with them (see full list of commands below)
 
 
