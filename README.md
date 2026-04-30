@@ -3,7 +3,7 @@
     <img src="github_gifs/client-server.gif" alt="client server gif gif" width="150" height="150">
   </a>
   <h3 align="center">IRC: Internet Relay Chat</h3>
-  Create Servers, chat with indidviduals or groups, connect to a gui client (irssi).
+  Spin up servers, chat one-on-one or in groups, and connect through a real GUI client (irssi).
   <br>
   <br>
 </div>
@@ -22,67 +22,66 @@
 
 # IRC
 
- A project in the advanced stages of the 42 curriculum. The goal is to implement a functional IRC (Internet Relay Chat) server, providing a deep dive into network programming and client-server architecture. Throughout the project, we adhered to strict requirements, building the server from scratch using `C++` without relying on modern networking libraries. This experience sharpened our understanding of sockets, concurrency, and the intricacies of the IRC protocol.
+An advanced 42 curriculum project: a fully functional IRC (Internet Relay Chat) server written from scratch in `C++`, without any modern networking libraries. Building it meant taking a deep dive into low-level network programming, the client-server model, non-blocking sockets, multiplexing with `poll`, and the quirks of the IRC protocol itself. The result is a server that any standards-compliant IRC client (like irssi) can connect to and chat through.
 
 <br>
 
-## How to run locally
+## Run it locally
 
-#### To create a server:
+#### Start a server:
 
-- Go to root directory and run `make`
-- Run `./ircserv 1234 1234`
-- The areguments are: `./ircserv <<port_number>> <<server_password>>`
+- From the project root, run `make`
+- Launch with `./ircserv 1234 1234`
+- Argument format: `./ircserv <port_number> <server_password>`
 
-#### To Join the server as client:
+#### Connect as a client (raw netcat):
 
-- Open a new terminal (shell)
+- Open a new terminal
 - Run `nc localhost 1234`
-- The areguments are: `nc <<port_number>>`
-- After joining server, type `PASS 1234` and `enter`.
-- After joining server, type `PASS 1234` and `enter`.
-- Type `NICK <<your_name>>` and `enter`.
-- Type `USER <<USER_NAME>> <<REAL_NAME>>` and `enter`.
-- Create other clients and chat with them (see full list of commands below).
+- Argument format: `nc <host> <port_number>`
+- Authenticate with `PASS 1234`
+- Pick a nickname: `NICK <your_nick>`
+- Register your user: `USER <username> <realname>`
+- Open additional clients the same way and start chatting (see the command list below).
 
 
-## Connect to a GUI (irssi)
+## Connect with a GUI (irssi)
 
-#### If you don't have irssi:
-- Run `home brew install irssi`
+#### Install irssi (macOS):
+- `brew install irssi`
 
-#### Connecting:
-- First, create a server (check instructions above).
-- Open a new terminal run `irssi`.
-- type `/connect localhost 2222 2222` and enter.
+#### Joining the server:
+- Start a server first (instructions above).
+- In a new terminal, run `irssi`.
+- Inside irssi, type `/connect localhost 2222 2222` and hit enter.
 
-## Command List
+## Command list
 
 | Command | Description |
 | :-----------: | :----------- |
-| Invite | The `INVITE` command is used to invite a user to a channel. |
-| Join | The `JOIN` command indicates that the client wants to join the given channel(s), each channel using the given key for it. |
-| Kick | The `KICK` command can be used to request the forced removal of a user from a channel. |
-| Kill | The `KILL` command is used to close the connection between a given client and the server they are connected to. `KILL` is a privileged command and is available only to IRC Operators. |
-| Mode | The `MODE` command is used to set or remove options (or modes) from a given target. Our user modes : i, o. Our channel modes: b,k,m,o,p,s,t,v |
-| Motd | The `MOTD` command is used to get the “Message of the Day” of the given server. |
-| Names | The `NAMES` command is used to view the nicknames joined to a channel and their channel membership prefixes. |
-| Nick | The `NICK` command is used to give the client a nickname or change the previous one. |
-| Notice | The `NOTICE` command is used to send notices between users, as well as to send notices to channels. The difference between `NOTICE` and `PRIVMSG` is that automatic replies must never be sent in response to a `NOTICE` message.  |
-| Part | The `PART` command removes the client from the given channel(s). |
-| Pass | The `PASS` command is used to set a ‘connection password’. If set, the password must be set before any attempt to register the connection is made. |
-| Ping | The `PING` command is sent by either clients or servers to check the other side of the connection is still connected and/or to check for connection latency, at the application layer. |
-| Privmsg | The `PRIVMSG` command is used to send private messages between users, as well as to send messages to channels. |
-| Quit | The `QUIT` command is used to terminate a client’s connection to the server. The server acknowledges this by replying with an `ERROR` message and closing the connection to the client. |
-| Topic | The `TOPIC` command is used to change or view the topic of the given channel. |
-| User | The `USER` command is used at the beginning of a connection to specify the username and realname of a new user. |
+| Invite | `INVITE` adds a user to a channel. |
+| Join | `JOIN` lets the client enter one or more channels, optionally using a key per channel. |
+| Kick | `KICK` forcibly removes a user from a channel. |
+| Kill | `KILL` terminates the connection between a given client and the server. Restricted to IRC operators. |
+| Mode | `MODE` toggles options on a target. User modes: i, o. Channel modes: b, k, m, o, p, s, t, v. |
+| Motd | `MOTD` returns the server's Message of the Day. |
+| Names | `NAMES` lists the nicknames currently in a channel along with their membership prefixes. |
+| Nick | `NICK` sets or changes the client's nickname. |
+| Notice | `NOTICE` sends a message to a user or channel. Unlike `PRIVMSG`, automatic replies must never be triggered by a `NOTICE`. |
+| Part | `PART` removes the client from the given channel(s). |
+| Pass | `PASS` provides the connection password. If the server requires one, it must be sent before registration completes. |
+| Ping | `PING` is used by clients or servers to check that the other side is still alive and to measure connection latency. |
+| Privmsg | `PRIVMSG` sends a message to another user or to a channel. |
+| Quit | `QUIT` ends a client's session. The server replies with an `ERROR` message and closes the socket. |
+| Topic | `TOPIC` reads or changes a channel's topic. |
+| User | `USER` is sent once at the start of a connection to register the username and real name. |
 
 
 
 <br>
 <br>
 
-## Client Server Connection Graph
+## Client / server connection graph
 
 
 <div align="center">
